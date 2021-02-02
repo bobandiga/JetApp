@@ -48,6 +48,10 @@ extension SignupViewController: SignupViewProtocol {
     
     func finishLoading() {
         loaderView.hide()
+        DispatchQueue.main.async { [unowned self] in
+            let vc = LocaleViewController()
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     

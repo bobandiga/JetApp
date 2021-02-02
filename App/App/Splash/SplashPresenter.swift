@@ -20,8 +20,8 @@ final class SplashPresenter: SplashPresenterProtocol {
     func autoLogin() {
         
         view?.toAuth()
-//        view?.loading()
-//        authManager?.autoLogin()
+        view?.loading()
+        authManager?.autoLogin()
     }
     
 }

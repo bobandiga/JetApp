@@ -24,9 +24,13 @@ final class SplashViewController: BaseMVPViewController<SplashPresenterProtocol,
 
 extension SplashViewController: SplashViewProtocol {
     func toAuth() {
-        let viewController = LoginViewController()
-        viewController.modalPresentationStyle = .currentContext
-        present(viewController, animated: true, completion: nil)
+        loaderView.hide()
+        DispatchQueue.main.async { [unowned self] in
+            let viewController = LoginViewController()
+            viewController.modalPresentationStyle = .currentContext
+            self.present(viewController, animated: true, completion: nil)
+        }
+        
     }
     
     func loading() {

@@ -35,6 +35,9 @@ final class LoginPresenter: LoginPresenterProtocol {
  
 extension LoginPresenter: AuthServiceDelegate {
     func didFinish(error: Error?) {
-        
+        #if DEBUG
+        print(error)
+        #endif
+        view?.finishLoading()
     }
 }

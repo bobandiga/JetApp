@@ -41,6 +41,9 @@ final class SignupPresenter: SignupPresenterProtocol {
 
 extension SignupPresenter: AuthServiceDelegate {
     func didFinish(error: Error?) {
+        #if DEBUG
+        print(error)
+        #endif
         view?.finishLoading()
     }
 }

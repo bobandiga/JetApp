@@ -9,12 +9,19 @@ import Foundation
 import CoreNetwork
 import CoreKeychain
 
-public protocol SandboxServiceProtocol {
+public protocol SandboxServiceDelegate: class {
+    func didFinish(error: Error?)
+}
+ 
+public protocol SandboxServiceProtocol: class {
+    var delegate: SandboxServiceDelegate? { get set }
     func getText(for locale: String)
     func getPerson(for locale: String)
 }
 
 final public class SandboxService: SandboxServiceProtocol {
+    
+    public weak var delegate: SandboxServiceDelegate?
     
     private lazy var keychain = AuthKeychain()
     private lazy var network: Networkable = SandboxNetwork()
@@ -28,7 +35,7 @@ final public class SandboxService: SandboxServiceProtocol {
         return URLSession(configuration: configuration)
     }()
     
-    public  init() {
+    public init() {
         keychain.getObject { [weak self] (token) in
             guard let unwrapToken = token else { return }
             self?.network.headers["token"] = "Bearer \(unwrapToken)"
@@ -41,13 +48,13 @@ final public class SandboxService: SandboxServiceProtocol {
         req.parameters["locale"] = locale
         
         guard let urlRequest = SandboxNetwork().prepareForRequest(request: req) else { return }
-        let task = session.dataTask(with: urlRequest) { (d, r, e) in
+        let task = session.dataTask(with: urlRequest) { [weak self] (d, r, e) in
             if let error = e {
+                self?.delegate?.didFinish(error: error)
                 return
             }
-            
-            guard let response = r as? HTTPURLResponse, let data = d else { return }
-            
+            guard let _ = r as? HTTPURLResponse, let data = d else { return }
+            self?.delegate?.didFinish(error: nil)
         }
         task.resume()
     }

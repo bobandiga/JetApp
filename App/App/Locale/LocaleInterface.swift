@@ -8,7 +8,8 @@
 import Foundation
 
 protocol LocaleViewProtocol: class {
-    
+    func loading()
+    func finishLoading()
 }
 
 protocol LocalePresenterProtocol: class {

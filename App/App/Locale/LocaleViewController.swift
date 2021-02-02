@@ -14,6 +14,7 @@ final class LocaleViewController: BaseMVPViewController<LocalePresenterProtocol,
         super.viewDidLoad()
         
         presenter = LocalePresenter()
+        presenter?.view = self
         
         customView.delegate = self
         customView.dataSource = self
@@ -36,7 +37,19 @@ extension LocaleViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.
+        presenter?.selectRow(index: indexPath.row)
     }
+    
+}
+
+extension LocaleViewController: LocaleViewProtocol {
+    func loading() {
+        loaderView.show(customView)
+    }
+    
+    func finishLoading() {
+        loaderView.hide()
+    }
+    
     
 }
