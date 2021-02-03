@@ -13,22 +13,46 @@ final class LocalePresenter: LocalePresenterProtocol {
     
     private lazy var locales = CoreModels.Locale.allCases.lazy
     private var service: SandboxServiceProtocol?
+    private var authSerivce: ManualAuthService?
+    var dataSource : [String] {
+        return CoreModels.Locale.allCases.map { $0.rawValue }
+    }
     
     init() {
         service = SandboxService()
         service?.delegate = self
-    }
-    
-    var dataSource : [String] {
-        return CoreModels.Locale.allCases.map { $0.rawValue }
+        
+        authSerivce = AuthService()
+        authSerivce?.delegate = self
     }
     
     weak var view: LocaleViewProtocol?
     
     func selectRow(index: Int) {
+        view?.loading()
         let locale = locales[index]
         service?.getText(for: locale.rawValue)
     }
+    
+    func logout() {
+        view?.loading()
+        authSerivce?.logout()
+    }
+    
+}
+
+extension LocalePresenter: AuthServiceDelegate {
+    func didLogout() {
+        DispatchQueue.main.async { [weak self] in
+            self?.view?.finishLoading()
+            self?.view?.toLogout()
+        }
+    }
+    
+    func didFinish(data: AuthResponse) {}
+    
+    func didAutoLogin() {}
+    
 }
  
 extension LocalePresenter: SandboxServiceDelegate {

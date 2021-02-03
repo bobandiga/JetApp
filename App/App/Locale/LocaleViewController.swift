@@ -20,7 +20,17 @@ final class LocaleViewController: BaseMVPViewController<LocalePresenterProtocol,
         customView.delegate = self
         customView.dataSource = self
         customView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Locales"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
     }
+    
+    @objc
+    private func logout() {
+        presenter?.logout()
+    }
+    
     
 }
 
@@ -54,5 +64,9 @@ extension LocaleViewController: LocaleViewProtocol {
     
     func finishLoading() {
         loaderView.hide()
+    }
+    
+    func toLogout() {
+        dismiss(animated: true, completion: nil)
     }
 }

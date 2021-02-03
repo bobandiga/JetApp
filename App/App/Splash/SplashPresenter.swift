@@ -25,12 +25,15 @@ final class SplashPresenter: SplashPresenterProtocol {
 }
 
 extension SplashPresenter: AuthServiceDelegate {
+
+    
     func didFinish(error: Error) {
         view?.finishLoading()
         view?.toAuth()
     }
     
     func didFinish(data: AuthResponse) {}
+    func didLogout() {}
     
     func didAutoLogin() {
         view?.finishLoading()

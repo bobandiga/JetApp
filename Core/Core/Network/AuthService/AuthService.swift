@@ -13,6 +13,7 @@ public protocol AuthServiceDelegate: class {
     func didFinish(error: Error)
     func didFinish(data: AuthResponse)
     func didAutoLogin()
+    func didLogout()
 }
 
 public protocol AutoAuthService: class {
@@ -47,7 +48,7 @@ final public class AuthService: NSObject, ManualAuthService, AutoAuthService {
         guard let urlRequest = requestFactory.prepareRequest(req) else { return }
         let session = CoreSessionFactory.prepareSharedSession(sessionDelegate: nil, delegateQueue: nil)
         let task = SimpleTask({ [weak self] (d, r, e) in
-            self?.handleResponse(data: d, response: r, error: e)
+            self?.handleLgogout(data: d, response: r, error: e)
         }).prepareTask(session: session, request: urlRequest)
         task.resume()
 
@@ -94,7 +95,8 @@ final public class AuthService: NSObject, ManualAuthService, AutoAuthService {
 }
 
 extension AuthService {
-    func handleResponse(data: Data?, response: URLResponse?, error: Error?) {
+    
+    func defaultHandle(data: Data?, response: URLResponse?, error: Error?, _ completion: (Data) -> Void){
         if let error = error {
             delegate?.didFinish(error: error)
             return
@@ -111,8 +113,22 @@ extension AuthService {
             delegate?.didFinish(error: DataError())
             return
         }
-        guard let authR = try? JSONDecoder().decode(AuthResponse.self, from: data) else { return }
-        keychain.setObject(object: authR.data.access_token)
-        delegate?.didFinish(data: authR)
+        
+        completion(data)
+    }
+    
+    func handleResponse(data: Data?, response: URLResponse?, error: Error?) {
+        defaultHandle(data: data, response: response, error: error) { [weak delegate] d in
+            guard let authR = try? JSONDecoder().decode(AuthResponse.self, from: d) else { return }
+            keychain.setObject(object: authR.data.access_token)
+            delegate?.didFinish(data: authR)
+        }
+        
+    }
+    
+    func handleLgogout(data: Data?, response: URLResponse?, error: Error?) {
+        defaultHandle(data: data, response: response, error: error) { [weak delegate] _ in
+            delegate?.didLogout()
+        }
     }
 }

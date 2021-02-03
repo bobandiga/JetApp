@@ -25,9 +25,10 @@ final class SplashViewController: BaseMVPViewController<SplashPresenterProtocol,
 
 extension SplashViewController: SplashViewProtocol {
     func toLocale() {
-        let viewController = LocaleViewController()
-        viewController.modalPresentationStyle = .currentContext
-        self.present(viewController, animated: true, completion: nil)
+        let vc = LocaleViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .currentContext
+        self.present(nav, animated: true, completion: nil)
     }
     
     func toAuth() {

@@ -41,6 +41,8 @@ final class SignupPresenter: SignupPresenterProtocol {
 }
 
 extension SignupPresenter: AuthServiceDelegate {
+
+    
     func didFinish(error: Error) {
         DispatchQueue.main.async { [weak self] in
             self?.view?.finishLoading()
@@ -62,4 +64,5 @@ extension SignupPresenter: AuthServiceDelegate {
     
     func didAutoLogin() {}
     
+    func didLogout() {}
 }

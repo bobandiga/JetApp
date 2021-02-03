@@ -35,6 +35,8 @@ final class LoginPresenter: LoginPresenterProtocol {
 }
  
 extension LoginPresenter: AuthServiceDelegate {
+
+    
     func didFinish(error: Error) {
         DispatchQueue.main.async { [weak self] in
             self?.view?.finishLoading()
@@ -54,5 +56,7 @@ extension LoginPresenter: AuthServiceDelegate {
     }
     
     func didAutoLogin() {}
+    
+    func didLogout() {}
     
 }

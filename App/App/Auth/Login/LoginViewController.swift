@@ -50,6 +50,7 @@ extension LoginViewController: LoginViewProtocol {
     func toLocale() {
         let vc = LocaleViewController()
         let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .currentContext
         self.present(nav, animated: true, completion: nil)
     }
     
