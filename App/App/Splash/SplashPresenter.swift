@@ -18,8 +18,6 @@ final class SplashPresenter: SplashPresenterProtocol {
     }
     
     func autoLogin() {
-        
-        view?.toAuth()
         view?.loading()
         authManager?.autoLogin()
     }
@@ -27,12 +25,16 @@ final class SplashPresenter: SplashPresenterProtocol {
 }
 
 extension SplashPresenter: AuthServiceDelegate {
-    func didFinish(error: Error?) {
-        if let _ = error {
-            view?.toAuth()
-            return
-        }
+    func didFinish(error: Error) {
         view?.finishLoading()
+        view?.toAuth()
+    }
+    
+    func didFinish(data: AuthResponse) {}
+    
+    func didAutoLogin() {
+        view?.finishLoading()
+        view?.toLocale()
     }
     
 }

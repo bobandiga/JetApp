@@ -11,12 +11,14 @@ final class LoginView: BaseView {
     
     private lazy var emailTF: UITextField = {
         let view = UITextField()
+        view.placeholder = "email"
         view.borderStyle = .roundedRect
         view.heightAnchor.constraint(equalToConstant: 48).isActive = true
         return view
     }()
     private lazy var passwordF: UITextField = {
         let view = UITextField()
+        view.placeholder = "password"
         view.borderStyle = .roundedRect
         view.heightAnchor.constraint(equalToConstant: 48).isActive = true
         return view

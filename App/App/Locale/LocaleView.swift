@@ -7,6 +7,4 @@
 
 import UIKit
 
-final class LocaleView: UITableView {
-    
-}
+final class LocaleView: UITableView {}

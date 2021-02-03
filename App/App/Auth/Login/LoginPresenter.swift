@@ -7,6 +7,7 @@
 
 import Foundation
 import Core
+import CoreModels
 
 final class LoginPresenter: LoginPresenterProtocol {
     weak var view: LoginViewProtocol?
@@ -34,10 +35,24 @@ final class LoginPresenter: LoginPresenterProtocol {
 }
  
 extension LoginPresenter: AuthServiceDelegate {
-    func didFinish(error: Error?) {
-        #if DEBUG
-        print(error)
-        #endif
-        view?.finishLoading()
+    func didFinish(error: Error) {
+        DispatchQueue.main.async { [weak self] in
+            self?.view?.finishLoading()
+            guard let error = error as? BaseError else {
+                self?.view?.showError(title: "Error", message: "Unefined")
+                return
+            }
+            self?.view?.showError(title: error.title, message: error.reason)
+        }
     }
+    
+    func didFinish(data: AuthResponse) {
+        DispatchQueue.main.async { [weak self] in
+            self?.view?.finishLoading()
+            self?.view?.toLocale()
+        }
+    }
+    
+    func didAutoLogin() {}
+    
 }

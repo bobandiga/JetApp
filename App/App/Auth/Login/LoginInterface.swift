@@ -10,6 +10,8 @@ import Foundation
 protocol LoginViewProtocol: class {
     func loading()
     func finishLoading()
+    func showError(title: String, message: String)
+    func toLocale()
 }
 
 protocol LoginPresenterProtocol: class {

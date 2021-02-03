@@ -10,11 +10,16 @@
 		B700C93825C809720019503F /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B700C92E25C809720019503F /* CoreNetwork.framework */; };
 		B700C93D25C809720019503F /* CoreNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C93C25C809720019503F /* CoreNetworkTests.swift */; };
 		B700C93F25C809720019503F /* CoreNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = B700C93125C809720019503F /* CoreNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B700C95B25C809D00019503F /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C95A25C809D00019503F /* Requestable.swift */; };
-		B700C95F25C809E10019503F /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C95E25C809E10019503F /* Method.swift */; };
-		B700C96325C809F10019503F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C96225C809F10019503F /* RequestType.swift */; };
-		B700C96925C80A080019503F /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C96825C80A080019503F /* Networkable.swift */; };
-		B700C96D25C80A220019503F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C96C25C80A220019503F /* Response.swift */; };
+		B71AFE2D25CAB37900206E77 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE1F25CAB37900206E77 /* URLComponents.swift */; };
+		B71AFE2E25CAB37900206E77 /* DownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2125CAB37900206E77 /* DownloadTask.swift */; };
+		B71AFE2F25CAB37900206E77 /* UploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2225CAB37900206E77 /* UploadTask.swift */; };
+		B71AFE3025CAB37900206E77 /* SimpleTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2325CAB37900206E77 /* SimpleTask.swift */; };
+		B71AFE3125CAB37900206E77 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2425CAB37900206E77 /* Task.swift */; };
+		B71AFE3225CAB37900206E77 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2625CAB37900206E77 /* Requestable.swift */; };
+		B71AFE3325CAB37900206E77 /* RMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2725CAB37900206E77 /* RMethod.swift */; };
+		B71AFE3425CAB37900206E77 /* CoreRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2925CAB37900206E77 /* CoreRequestFactory.swift */; };
+		B71AFE3525CAB37900206E77 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2A25CAB37900206E77 /* RequestFactory.swift */; };
+		B71AFE3625CAB37900206E77 /* SessionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE2C25CAB37900206E77 /* SessionFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +39,16 @@
 		B700C93725C809720019503F /* CoreNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B700C93C25C809720019503F /* CoreNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkTests.swift; sourceTree = "<group>"; };
 		B700C93E25C809720019503F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B700C95A25C809D00019503F /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
-		B700C95E25C809E10019503F /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
-		B700C96225C809F10019503F /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
-		B700C96825C80A080019503F /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
-		B700C96C25C80A220019503F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B71AFE1F25CAB37900206E77 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
+		B71AFE2125CAB37900206E77 /* DownloadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTask.swift; sourceTree = "<group>"; };
+		B71AFE2225CAB37900206E77 /* UploadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadTask.swift; sourceTree = "<group>"; };
+		B71AFE2325CAB37900206E77 /* SimpleTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTask.swift; sourceTree = "<group>"; };
+		B71AFE2425CAB37900206E77 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B71AFE2625CAB37900206E77 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		B71AFE2725CAB37900206E77 /* RMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMethod.swift; sourceTree = "<group>"; };
+		B71AFE2925CAB37900206E77 /* CoreRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreRequestFactory.swift; sourceTree = "<group>"; };
+		B71AFE2A25CAB37900206E77 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		B71AFE2C25CAB37900206E77 /* SessionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +91,7 @@
 		B700C93025C809720019503F /* CoreNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				B700C95925C809B60019503F /* Response */,
-				B700C95825C809B00019503F /* Request */,
-				B700C95725C809A90019503F /* Network */,
+				B71AFE1D25CAB37900206E77 /* CoreNetwork */,
 				B700C93125C809720019503F /* CoreNetwork.h */,
 				B700C93225C809720019503F /* Info.plist */,
 			);
@@ -99,30 +107,61 @@
 			path = CoreNetworkTests;
 			sourceTree = "<group>";
 		};
-		B700C95725C809A90019503F /* Network */ = {
+		B71AFE1D25CAB37900206E77 /* CoreNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				B700C96825C80A080019503F /* Networkable.swift */,
+				B71AFE1E25CAB37900206E77 /* Extension */,
+				B71AFE2025CAB37900206E77 /* Task */,
+				B71AFE2525CAB37900206E77 /* Request */,
+				B71AFE2825CAB37900206E77 /* RequestFactory */,
+				B71AFE2B25CAB37900206E77 /* SessionFactory */,
 			);
-			path = Network;
+			path = CoreNetwork;
 			sourceTree = "<group>";
 		};
-		B700C95825C809B00019503F /* Request */ = {
+		B71AFE1E25CAB37900206E77 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B700C95A25C809D00019503F /* Requestable.swift */,
-				B700C95E25C809E10019503F /* Method.swift */,
-				B700C96225C809F10019503F /* RequestType.swift */,
+				B71AFE1F25CAB37900206E77 /* URLComponents.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B71AFE2025CAB37900206E77 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				B71AFE2125CAB37900206E77 /* DownloadTask.swift */,
+				B71AFE2225CAB37900206E77 /* UploadTask.swift */,
+				B71AFE2325CAB37900206E77 /* SimpleTask.swift */,
+				B71AFE2425CAB37900206E77 /* Task.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		B71AFE2525CAB37900206E77 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B71AFE2625CAB37900206E77 /* Requestable.swift */,
+				B71AFE2725CAB37900206E77 /* RMethod.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
 		};
-		B700C95925C809B60019503F /* Response */ = {
+		B71AFE2825CAB37900206E77 /* RequestFactory */ = {
 			isa = PBXGroup;
 			children = (
-				B700C96C25C80A220019503F /* Response.swift */,
+				B71AFE2925CAB37900206E77 /* CoreRequestFactory.swift */,
+				B71AFE2A25CAB37900206E77 /* RequestFactory.swift */,
 			);
-			path = Response;
+			path = RequestFactory;
+			sourceTree = "<group>";
+		};
+		B71AFE2B25CAB37900206E77 /* SessionFactory */ = {
+			isa = PBXGroup;
+			children = (
+				B71AFE2C25CAB37900206E77 /* SessionFactory.swift */,
+			);
+			path = SessionFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +273,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B700C95F25C809E10019503F /* Method.swift in Sources */,
-				B700C95B25C809D00019503F /* Requestable.swift in Sources */,
-				B700C96925C80A080019503F /* Networkable.swift in Sources */,
-				B700C96325C809F10019503F /* RequestType.swift in Sources */,
-				B700C96D25C80A220019503F /* Response.swift in Sources */,
+				B71AFE3525CAB37900206E77 /* RequestFactory.swift in Sources */,
+				B71AFE3025CAB37900206E77 /* SimpleTask.swift in Sources */,
+				B71AFE2F25CAB37900206E77 /* UploadTask.swift in Sources */,
+				B71AFE3125CAB37900206E77 /* Task.swift in Sources */,
+				B71AFE3225CAB37900206E77 /* Requestable.swift in Sources */,
+				B71AFE2E25CAB37900206E77 /* DownloadTask.swift in Sources */,
+				B71AFE3425CAB37900206E77 /* CoreRequestFactory.swift in Sources */,
+				B71AFE3325CAB37900206E77 /* RMethod.swift in Sources */,
+				B71AFE2D25CAB37900206E77 /* URLComponents.swift in Sources */,
+				B71AFE3625CAB37900206E77 /* SessionFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

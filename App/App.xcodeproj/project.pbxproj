@@ -33,6 +33,7 @@
 		B77889FA25C8A5AD00264CB4 /* LocalePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77889F925C8A5AD00264CB4 /* LocalePresenter.swift */; };
 		B77889FD25C8A5BF00264CB4 /* LocaleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77889FC25C8A5BF00264CB4 /* LocaleInterface.swift */; };
 		B7788A0125C8A5C800264CB4 /* LocaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7788A0025C8A5C800264CB4 /* LocaleView.swift */; };
+		B7FB1B7025CB0DFD0033ACD1 /* OccuaranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB1B6F25CB0DFD0033ACD1 /* OccuaranceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		B77889F925C8A5AD00264CB4 /* LocalePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalePresenter.swift; sourceTree = "<group>"; };
 		B77889FC25C8A5BF00264CB4 /* LocaleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleInterface.swift; sourceTree = "<group>"; };
 		B7788A0025C8A5C800264CB4 /* LocaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleView.swift; sourceTree = "<group>"; };
+		B7FB1B6F25CB0DFD0033ACD1 /* OccuaranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccuaranceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		B700C8E325C808850019503F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B7FB1B6E25CB0DE50033ACD1 /* Occuarence */,
 				B700CA2525C83EDC0019503F /* Common */,
 				B700C9BB25C8326E0019503F /* Required */,
 				B77889F425C8A1C500264CB4 /* Locale */,
@@ -200,6 +203,14 @@
 			path = Locale;
 			sourceTree = "<group>";
 		};
+		B7FB1B6E25CB0DE50033ACD1 /* Occuarence */ = {
+			isa = PBXGroup;
+			children = (
+				B7FB1B6F25CB0DFD0033ACD1 /* OccuaranceViewController.swift */,
+			);
+			path = Occuarence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,6 +300,7 @@
 				B778899625C858F600264CB4 /* LoginData.swift in Sources */,
 				B700CA3925C8408B0019503F /* SplashPresenter.swift in Sources */,
 				B77889FA25C8A5AD00264CB4 /* LocalePresenter.swift in Sources */,
+				B7FB1B7025CB0DFD0033ACD1 /* OccuaranceViewController.swift in Sources */,
 				B700CA5425C84CDE0019503F /* SignupView.swift in Sources */,
 				B700CA4025C840F90019503F /* SplashInterface.swift in Sources */,
 				B7788A0125C8A5C800264CB4 /* LocaleView.swift in Sources */,

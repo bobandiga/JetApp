@@ -16,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.rootViewController = SplashViewController()
         window?.makeKeyAndVisible()
+        
         return true
     }
 
 }
+
+
 

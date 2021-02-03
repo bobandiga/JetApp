@@ -42,17 +42,18 @@ private extension SignupViewController {
 }
 
 extension SignupViewController: SignupViewProtocol {
+    func toLocale() {
+        let vc = LocaleViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
+    }
+    
     func loading() {
         loaderView.show(customView)
     }
     
     func finishLoading() {
         loaderView.hide()
-        DispatchQueue.main.async { [unowned self] in
-            let vc = LocaleViewController()
-            self.present(vc, animated: true, completion: nil)
-        }
     }
-    
     
 }

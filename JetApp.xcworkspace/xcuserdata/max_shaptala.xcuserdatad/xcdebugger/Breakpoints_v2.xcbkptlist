@@ -46,41 +46,9 @@
             filePath = "Core/Core/SandboxService/SandboxService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "getText(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "53601D59-936C-46E5-A706-394D70DA7B5E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "App/App/Locale/LocaleViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "78C86B1C-111A-470A-9BB6-22F2BF74F088"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "App/App/Locale/LocalePresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "selectRow(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,8 +62,8 @@
             filePath = "Core/Core/SandboxService/SandboxService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "getText(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +78,8 @@
             filePath = "Core/Core/SandboxService/SandboxService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "getText(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,42 +110,10 @@
             filePath = "Core/Core/SandboxService/SandboxService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "init()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D7526F38-1B42-41FF-AA77-FE6253DF0F30 - b906d98902bd936e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Core.SandboxService.init() -&gt; Core.SandboxService"
-                  moduleName = "App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/max_shaptala/Projects/Tests/JetApp/Core/Core/SandboxService/SandboxService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "450">
-               </Location>
-               <Location
-                  uuid = "D7526F38-1B42-41FF-AA77-FE6253DF0F30 - 20c163d335a5e281"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Core.SandboxService.init() -&gt; Core.SandboxService"
-                  moduleName = "App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/max_shaptala/Projects/Tests/JetApp/Core/Core/SandboxService/SandboxService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "173">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -193,6 +129,54 @@
             startingLineNumber = "135"
             endingLineNumber = "135"
             landmarkName = "urlSession(_:dataTask:didReceive:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C166A2BE-1697-4F30-B06F-EB12A6876C7B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Core/Core/Network/AuthService/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "register(name:email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4D8282C-BA51-4462-AD45-AD209220BAB6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Core/Core/Network/AuthService/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB87A36D-0135-43EB-9313-0C5E6E68AED9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Core/Core/Network/AuthService/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "handleResponse(data:response:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

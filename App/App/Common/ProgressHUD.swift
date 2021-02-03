@@ -79,10 +79,12 @@ final public class ProgressHUD: UIView {
     }
     
     public func hide() {
-        UIView.animate(withDuration: 0.25) { [weak self] in
-            self?.alpha = 0
-        } completion: { [weak self] (_) in
-            self?.removeFromSuperview()
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: 0.25) { [weak self]  in
+                self?.alpha = 0
+            } completion: { [weak self] (_) in
+                self?.removeFromSuperview()
+            }
         }
     }
     

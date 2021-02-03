@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import CoreModels
 
 protocol LocaleViewProtocol: class {
     func loading()
     func finishLoading()
+    func showError(title: String, message: String)
+    func toOccurance(array: [CharSet])
 }
 
 protocol LocalePresenterProtocol: class {

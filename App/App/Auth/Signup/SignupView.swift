@@ -10,18 +10,21 @@ import UIKit
 final class SignupView: BaseView {
     private lazy var nameTF: UITextField = {
         let view = UITextField()
+        view.placeholder = "name"
         view.borderStyle = .roundedRect
         view.heightAnchor.constraint(equalToConstant: 48).isActive = true
         return view
     }()
     private lazy var emailTF: UITextField = {
         let view = UITextField()
+        view.placeholder = "email"
         view.borderStyle = .roundedRect
         view.heightAnchor.constraint(equalToConstant: 48).isActive = true
         return view
     }()
     private lazy var passwordF: UITextField = {
         let view = UITextField()
+        view.placeholder = "password"
         view.borderStyle = .roundedRect
         view.heightAnchor.constraint(equalToConstant: 48).isActive = true
         return view

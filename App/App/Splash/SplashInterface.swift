@@ -11,6 +11,7 @@ protocol SplashViewProtocol: class {
     func loading()
     func finishLoading()
     func toAuth()
+    func toLocale()
 }
 
 protocol SplashPresenterProtocol: class {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreModels
 
 final class LocaleViewController: BaseMVPViewController<LocalePresenterProtocol, LocaleView> {
     
@@ -29,9 +30,7 @@ extension LocaleViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UITableViewCell else {
-            fatalError()
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = presenter?.dataSource[indexPath.row]
         return cell
     }
@@ -43,6 +42,12 @@ extension LocaleViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension LocaleViewController: LocaleViewProtocol {
+    func toOccurance(array: [CharSet]) {
+        let vc = OccuaranceViewController()
+        vc.dataSource = array
+        present(vc, animated: true, completion: nil)
+    }
+    
     func loading() {
         loaderView.show(customView)
     }
@@ -50,6 +55,4 @@ extension LocaleViewController: LocaleViewProtocol {
     func finishLoading() {
         loaderView.hide()
     }
-    
-    
 }

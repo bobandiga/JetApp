@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71AFE5125CAEE3B00206E77 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE5025CAEE3B00206E77 /* BaseError.swift */; };
 		B77889D725C898E600264CB4 /* CoreModels.h in Headers */ = {isa = PBXBuildFile; fileRef = B77889D525C898E600264CB4 /* CoreModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B77889E725C898EF00264CB4 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77889E625C898EF00264CB4 /* Locale.swift */; };
+		B7FB1B7425CB11110033ACD1 /* CharSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB1B7325CB11110033ACD1 /* CharSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B71AFE5025CAEE3B00206E77 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		B77889D225C898E600264CB4 /* CoreModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77889D525C898E600264CB4 /* CoreModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreModels.h; sourceTree = "<group>"; };
 		B77889D625C898E600264CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B77889E625C898EF00264CB4 /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
+		B7FB1B7325CB11110033ACD1 /* CharSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B71AFE4D25CAEDF700206E77 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				B77889E625C898EF00264CB4 /* Locale.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		B71AFE4F25CAEE0700206E77 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B71AFE5025CAEE3B00206E77 /* BaseError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		B77889C825C898E600264CB4 = {
 			isa = PBXGroup;
 			children = (
@@ -48,11 +68,21 @@
 		B77889D425C898E600264CB4 /* CoreModels */ = {
 			isa = PBXGroup;
 			children = (
+				B7FB1B7225CB11050033ACD1 /* CharSet */,
+				B71AFE4F25CAEE0700206E77 /* Error */,
+				B71AFE4D25CAEDF700206E77 /* Locale */,
 				B77889D525C898E600264CB4 /* CoreModels.h */,
 				B77889D625C898E600264CB4 /* Info.plist */,
-				B77889E625C898EF00264CB4 /* Locale.swift */,
 			);
 			path = CoreModels;
+			sourceTree = "<group>";
+		};
+		B7FB1B7225CB11050033ACD1 /* CharSet */ = {
+			isa = PBXGroup;
+			children = (
+				B7FB1B7325CB11110033ACD1 /* CharSet.swift */,
+			);
+			path = CharSet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FB1B7425CB11110033ACD1 /* CharSet.swift in Sources */,
 				B77889E725C898EF00264CB4 /* Locale.swift in Sources */,
+				B71AFE5125CAEE3B00206E77 /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

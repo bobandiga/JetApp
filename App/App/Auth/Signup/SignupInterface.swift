@@ -10,6 +10,8 @@ import Foundation
 protocol SignupViewProtocol: class {
     func loading()
     func finishLoading()
+    func showError(title: String, message: String)
+    func toLocale()
 }
 
 protocol SignupPresenterProtocol: class {

@@ -14,25 +14,24 @@ struct AuthKeychain: KeyChainable {
     public init() {}
     
     public func setObject(object: String) {
+        guard let data: Data = object.data(using: .utf8) else { return }
         let keychainItemQuery = [
-            kSecValueData: object.data(using: .utf8),
+            kSecValueData: data,
             kSecAttrComment: "token",
             kSecClass: kSecClassGenericPassword
         ] as CFDictionary
         
-        getObject { (_t) in
-            guard let token = _t else {
-                let _ = SecItemAdd(keychainItemQuery, nil)
-                return
-            }
-            let updateFields = [
-              kSecValueData: "newPassword".data(using: .utf8)!
-            ] as CFDictionary
-            let _ = SecItemUpdate(keychainItemQuery, updateFields)
+        guard let _  = getObject() else {
+            let _ = SecItemAdd(keychainItemQuery, nil)
+            return
         }
+        let updateFields = [
+          kSecValueData: "newPassword".data(using: .utf8)!
+        ] as CFDictionary
+        let _ = SecItemUpdate(keychainItemQuery, updateFields)
     }
     
-    public func getObject(_ completion: @escaping (String?) -> Void) {
+    public func getObject() -> String? {
         let query = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrComment: "token",
@@ -45,12 +44,11 @@ struct AuthKeychain: KeyChainable {
         let _ = SecItemCopyMatching(query, &result)
         
         guard let dic = result as? [NSDictionary], let tokenData = dic.first?[kSecValueData] as? Data else {
-            completion(nil)
-            return
+            return nil
         }
         
-        guard let token = String(data: tokenData, encoding: .utf8) else { completion(nil); return }
-        completion(token)
+        guard let token = String(data: tokenData, encoding: .utf8) else { return nil }
+        return token
     }
     
     public func deleteObject() {

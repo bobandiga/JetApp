@@ -14,16 +14,18 @@
 		B700C97F25C81D080019503F /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C97E25C81D080019503F /* RegisterRequest.swift */; };
 		B700C98525C81DA40019503F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C98425C81DA40019503F /* LoginRequest.swift */; };
 		B700C98925C81DBB0019503F /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C98825C81DBB0019503F /* LogoutRequest.swift */; };
-		B700C98E25C81F3A0019503F /* AuthNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700C98D25C81F3A0019503F /* AuthNetwork.swift */; };
 		B700C9B625C830E30019503F /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B700C95025C809730019503F /* CoreNetwork.framework */; };
 		B700CA0925C835020019503F /* AuthKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700CA0825C835020019503F /* AuthKeychain.swift */; };
 		B700CA1225C835950019503F /* CoreKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B700C9F325C8336E0019503F /* CoreKeychain.framework */; };
-		B700CA1F25C83D710019503F /* ErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B700CA1E25C83D710019503F /* ErrorFactory.swift */; };
+		B71AFE4825CAC92100206E77 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE4725CAC92100206E77 /* ResponseError.swift */; };
+		B71AFE5725CAF2DE00206E77 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE5625CAF2DE00206E77 /* DataError.swift */; };
+		B71AFE5F25CAF47E00206E77 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE5E25CAF47E00206E77 /* RequestError.swift */; };
+		B71AFE6525CAF66000206E77 /* TokenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE6425CAF66000206E77 /* TokenError.swift */; };
+		B71AFE6B25CAFA5600206E77 /* AutoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AFE6A25CAFA5600206E77 /* AutoLogin.swift */; };
 		B778899E25C88D3D00264CB4 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778899D25C88D3D00264CB4 /* AuthResponse.swift */; };
 		B77889AD25C8948800264CB4 /* GetTextRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77889AC25C8948800264CB4 /* GetTextRequest.swift */; };
 		B77889B325C8949200264CB4 /* GetPersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77889B225C8949200264CB4 /* GetPersonRequest.swift */; };
 		B77889B925C8954100264CB4 /* SandboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77889B825C8954100264CB4 /* SandboxService.swift */; };
-		B77889BD25C895CB00264CB4 /* SandboxNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77889BC25C895CB00264CB4 /* SandboxNetwork.swift */; };
 		B77889EB25C8990200264CB4 /* CoreModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77889E225C898E700264CB4 /* CoreModels.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,15 +86,17 @@
 		B700C97E25C81D080019503F /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		B700C98425C81DA40019503F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		B700C98825C81DBB0019503F /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
-		B700C98D25C81F3A0019503F /* AuthNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetwork.swift; sourceTree = "<group>"; };
 		B700C9EA25C8336D0019503F /* CoreKeychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreKeychain.xcodeproj; path = CoreKeychain/CoreKeychain.xcodeproj; sourceTree = "<group>"; };
 		B700CA0825C835020019503F /* AuthKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthKeychain.swift; sourceTree = "<group>"; };
-		B700CA1E25C83D710019503F /* ErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFactory.swift; sourceTree = "<group>"; };
+		B71AFE4725CAC92100206E77 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		B71AFE5625CAF2DE00206E77 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		B71AFE5E25CAF47E00206E77 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		B71AFE6425CAF66000206E77 /* TokenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenError.swift; sourceTree = "<group>"; };
+		B71AFE6A25CAFA5600206E77 /* AutoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLogin.swift; sourceTree = "<group>"; };
 		B778899D25C88D3D00264CB4 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		B77889AC25C8948800264CB4 /* GetTextRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTextRequest.swift; sourceTree = "<group>"; };
 		B77889B225C8949200264CB4 /* GetPersonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPersonRequest.swift; sourceTree = "<group>"; };
 		B77889B825C8954100264CB4 /* SandboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxService.swift; sourceTree = "<group>"; };
-		B77889BC25C895CB00264CB4 /* SandboxNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxNetwork.swift; sourceTree = "<group>"; };
 		B77889DD25C898E600264CB4 /* CoreModels.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreModels.xcodeproj; path = CoreModels/CoreModels.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,8 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				B700CA0725C834EA0019503F /* Keychain */,
-				B77889A725C893E800264CB4 /* SandboxService */,
-				B700C91F25C808AC0019503F /* AuthService */,
+				B71AFE3925CAB50800206E77 /* Network */,
 				B700C90625C808A10019503F /* Core.h */,
 				B700C90725C808A10019503F /* Info.plist */,
 			);
@@ -164,9 +167,9 @@
 		B700C91F25C808AC0019503F /* AuthService */ = {
 			isa = PBXGroup;
 			children = (
+				B700C97D25C81CE80019503F /* Requests */,
+				B778899825C88D3100264CB4 /* Responses */,
 				B700C92025C808B90019503F /* AuthService.swift */,
-				B700CA1D25C83D5F0019503F /* Errors */,
-				B700CA0625C834DF0019503F /* Network */,
 			);
 			path = AuthService;
 			sourceTree = "<group>";
@@ -206,16 +209,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B700CA0625C834DF0019503F /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				B778899825C88D3100264CB4 /* Responses */,
-				B700C97D25C81CE80019503F /* Requests */,
-				B700C98D25C81F3A0019503F /* AuthNetwork.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		B700CA0725C834EA0019503F /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,10 +217,31 @@
 			path = Keychain;
 			sourceTree = "<group>";
 		};
-		B700CA1D25C83D5F0019503F /* Errors */ = {
+		B71AFE3925CAB50800206E77 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				B700CA1E25C83D710019503F /* ErrorFactory.swift */,
+				B71AFE4625CAC90500206E77 /* Errors */,
+				B77889A725C893E800264CB4 /* SandboxService */,
+				B700C91F25C808AC0019503F /* AuthService */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B71AFE4525CAC2FB00206E77 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		B71AFE4625CAC90500206E77 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B71AFE4725CAC92100206E77 /* ResponseError.swift */,
+				B71AFE5625CAF2DE00206E77 /* DataError.swift */,
+				B71AFE5E25CAF47E00206E77 /* RequestError.swift */,
+				B71AFE6425CAF66000206E77 /* TokenError.swift */,
+				B71AFE6A25CAFA5600206E77 /* AutoLogin.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -243,19 +257,11 @@
 		B77889A725C893E800264CB4 /* SandboxService */ = {
 			isa = PBXGroup;
 			children = (
+				B71AFE4525CAC2FB00206E77 /* Responses */,
+				B77889AB25C8942F00264CB4 /* Requests */,
 				B77889B825C8954100264CB4 /* SandboxService.swift */,
-				B77889AA25C8942300264CB4 /* Network */,
 			);
 			path = SandboxService;
-			sourceTree = "<group>";
-		};
-		B77889AA25C8942300264CB4 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				B77889AB25C8942F00264CB4 /* Requests */,
-				B77889BC25C895CB00264CB4 /* SandboxNetwork.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		B77889AB25C8942F00264CB4 /* Requests */ = {
@@ -441,13 +447,15 @@
 				B77889B925C8954100264CB4 /* SandboxService.swift in Sources */,
 				B700CA0925C835020019503F /* AuthKeychain.swift in Sources */,
 				B77889AD25C8948800264CB4 /* GetTextRequest.swift in Sources */,
+				B71AFE6525CAF66000206E77 /* TokenError.swift in Sources */,
 				B778899E25C88D3D00264CB4 /* AuthResponse.swift in Sources */,
-				B700C98E25C81F3A0019503F /* AuthNetwork.swift in Sources */,
 				B700C92125C808B90019503F /* AuthService.swift in Sources */,
-				B77889BD25C895CB00264CB4 /* SandboxNetwork.swift in Sources */,
+				B71AFE5F25CAF47E00206E77 /* RequestError.swift in Sources */,
 				B700C97F25C81D080019503F /* RegisterRequest.swift in Sources */,
+				B71AFE4825CAC92100206E77 /* ResponseError.swift in Sources */,
+				B71AFE5725CAF2DE00206E77 /* DataError.swift in Sources */,
+				B71AFE6B25CAFA5600206E77 /* AutoLogin.swift in Sources */,
 				B700C98525C81DA40019503F /* LoginRequest.swift in Sources */,
-				B700CA1F25C83D710019503F /* ErrorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

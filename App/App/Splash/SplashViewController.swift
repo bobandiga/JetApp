@@ -16,21 +16,24 @@ final class SplashViewController: BaseMVPViewController<SplashPresenterProtocol,
         presenter?.view = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter?.autoLogin()
     }
+
 }
 
 extension SplashViewController: SplashViewProtocol {
+    func toLocale() {
+        let viewController = LocaleViewController()
+        viewController.modalPresentationStyle = .currentContext
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     func toAuth() {
-        loaderView.hide()
-        DispatchQueue.main.async { [unowned self] in
-            let viewController = LoginViewController()
-            viewController.modalPresentationStyle = .currentContext
-            self.present(viewController, animated: true, completion: nil)
-        }
-        
+        let viewController = LoginViewController()
+        viewController.modalPresentationStyle = .currentContext
+        self.present(viewController, animated: true, completion: nil)
     }
     
     func loading() {

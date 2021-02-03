@@ -73,7 +73,7 @@
 		B700C9D225C8336D0019503F /* CoreKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				B700CA0125C834170019503F /* KeyChainable */,
+				B700CA0125C834170019503F /* CoreKeychain */,
 				B700C9D325C8336D0019503F /* CoreKeychain.h */,
 				B700C9D425C8336D0019503F /* Info.plist */,
 			);
@@ -89,12 +89,12 @@
 			path = CoreKeychainTests;
 			sourceTree = "<group>";
 		};
-		B700CA0125C834170019503F /* KeyChainable */ = {
+		B700CA0125C834170019503F /* CoreKeychain */ = {
 			isa = PBXGroup;
 			children = (
 				B700CA0225C834770019503F /* KeyChainable.swift */,
 			);
-			path = KeyChainable;
+			path = CoreKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
